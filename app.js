@@ -19,13 +19,14 @@ function agregarAmigo(){
     }
     limpiarCaja();
     limpiarLista();
-    actualizarLista();
+    actualizarLista();  
     return
 }
-
+    
 //Limpiar el campo de entrada: Después de añadir el nombre, restablecer el campo de texto a una cadena vacía.
 function limpiarCaja() {
     document.querySelector('#amigo').value = '';
+    document.querySelector('#amigo').focus();
 }
 
 //Limpiar la lista existente: Establecer lista.innerHTML = "" para asegurarse de que no haya duplicados al actualizar.
