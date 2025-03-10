@@ -1,19 +1,23 @@
-# Desafío amigo secreto
+# Challenge amigo secreto
 
 
 ## Objetivo del proyecto
 
-Este es mi primer desafío del curso Hello ONE
+Esta es la versión 2.0 del primer desafío del curso Hello ONE
 Oracle Next Education - Alura Latam
 
-El HTML fue brindado por el organizador y fue solicitado el desarrollo de la lógica a través de JS. 
+La estructura original del HTML fue brindada por el organizador y podés encontrarla en el repositorio https://github.com/Car-fuentes/desafio-amigo-secreto.git donde se encuentra mi primer trabajo. 
+
+En esta versión me puse creativa y realicé algunas modificaciones.
+
+El desarrollo de la lógica del sorteo fue solicitado a través de JS. 
 
 
 ## Funcionalidades del proyecto:
 
 ``` Funcionalidad 1: Creación de una lista de amigos a partir de los nombres que ingresa el usuario.```
 
-``` Funcionalidad 2: Sorteo y devolución del amigo sorteado.```
+``` Funcionalidad 2: Sorteo y devolución de un amigo secreto para cada uno de los participantes.```
 
 
 ## Las tecnologías utilizadas fueron:
@@ -22,5 +26,7 @@ El HTML fue brindado por el organizador y fue solicitado el desarrollo de la ló
 * JavaScript
 
 ---
+
+## Desarrollado por **Fuentes Carolina Inés** - 2025
 
 Espero lo disfrutes.

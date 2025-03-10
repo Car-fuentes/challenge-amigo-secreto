@@ -39,7 +39,7 @@ function limpiarLista(){
 //Agregar elementos a la lista: Para cada amigo, crear un nuevo elemento de lista.
 
 function actualizarLista(){
-    let listaHTML = "<h4>Participantes:</h4>";
+    let listaHTML = "<h4>Participante:</h4>";
 
     for (let amigo of listaAmigos){
         listaHTML += `<li>${amigo}</li>`;
@@ -49,18 +49,52 @@ function actualizarLista(){
 
 //Implementa una función para sortear los amigos
 
+//crear listado vacio amigos sorteados
+
+let listaAmigosSorteados = [ ];
+let contadorIndiceSorteado = 0;
+
+let listadoSorteo = document.getElementById('resultado');
+
+function mostrarListaSorteados(){
+        let listaResultados = "<h4>Tu amigo secreto es:</h4>";
+
+    for (let amigoSorteado of listaAmigosSorteados){
+        listaResultados += `<li>${amigoSorteado}</li>`;
+    }
+    listadoSorteo.innerHTML = listaResultados;
+}
 
 function sortearAmigo(){
-    //Validar que haya amigos disponibles: Antes de sortear, comprobar si el array amigos no está vacío.
+    //Antes de sortear, comprobar que el array amigos no esté vacío.
     if (listaAmigos.length === 0){
-        lista.innerHTML = 'Por favor agregue amigos a su lista para poder realizar el sorteo'
-    } else {
-        //Generar un índice aleatorio
-        let indiceSorteado =  Math.floor(Math.random()*listaAmigos.length);
-        //Obtener el nombre sorteado
-        let amigoSorteado = listaAmigos[indiceSorteado];
-        //Mostrar el resultado
-        document.getElementById("resultado").innerHTML = `El amigo secreto es: <b>¡${amigoSorteado}!</b>`;
+        lista.innerHTML = 'Por favor agregue amigos a su lista para poder realizar el sorteo'; 
+        return}
+        console.log("el total de amigos es " + listaAmigos.length)
+        console.log("el total de amigos sorteados es " + listaAmigosSorteados.length)
 
-    }  
+    while (listaAmigosSorteados.length < listaAmigos.length){
+       //Generar un índice aleatorio
+        let indiceSorteado =  Math.floor(Math.random()*listaAmigos.length);
+        //Si coinciden los indices de los nombres volver a sortear
+        if (indiceSorteado == contadorIndiceSorteado ){
+            sortearAmigo();
+        } else{
+            //convertir el numero en nombre y comparar con los nombres sorteados
+            let amigoSorteado = listaAmigos[indiceSorteado];
+            if (listaAmigosSorteados.includes(amigoSorteado)){
+                sortearAmigo();
+            } else{
+            //agregar a la lista
+            listaAmigosSorteados.push(amigoSorteado);
+            console.log(listaAmigosSorteados);
+            contadorIndiceSorteado +=1;
+            console.log(contadorIndiceSorteado);
+            };    
+        if (listaAmigosSorteados.length === listaAmigos.length) {
+                mostrarListaSorteados();
+            }
+        };
+    };
+
 }

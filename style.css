@@ -1,10 +1,11 @@
 :root {
-    --color-primary: #4B69FD;
-    --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
-    --color-button: #fe652b;
-    --color-button-hover: #e55720;
-    --color-text: #444444;
+    --color-primary: #221065;
+    --color-secondary: #f6ecdd;
+    --color-tertiary: #803828;
+    --color-button: #4bc6c6;
+    --color-button-hover: #c87a4a;
+    --color-text: #fff9eb;
+    --color-text-amigo: #2e1294;
     --color-white: #FFFFFF;
 }
 
@@ -17,7 +18,7 @@
 
 body {
     height: 100vh;
-    background-color: var(--color-primary);
+    background-color: var(--color-white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,11 +33,18 @@ body {
 
 /* Banner */
 .header-banner {
-    flex: 40%;
+    flex: 90%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 40px 0 0;
+    align-items: flex-end;
+    padding: 10px;
+    background-image: url("assets/fotofondo.jpg");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+
 }
 
 /* Sección de entrada */
@@ -44,7 +52,6 @@ body {
     flex: 60%;
     background-color: var(--color-secondary);
     border: 1px solid #000;
-    border-radius: 64px 64px 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,16 +61,17 @@ body {
 
 /* Títulos */
 .main-title {
-    font-size: 48px;
-    font-family: "Merriweather", serif;
+    font-size: 50px;
+    font-family: "Inter", serif; /*"Merriweather", serif;*/
     font-weight: 900;
-    font-style: italic;
+    /*font-style: italic;*/
     color: var(--color-white);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 }
 
 .section-title {
     font-family: "Inter", serif;
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 700;
     color: var(--color-primary);
     margin: 18px 0;
@@ -122,24 +130,34 @@ button {
 }
 
 .button-add:hover {
-    background-color: #a1a1a1;
+    background-color: var(--color-button);
 }
 
 /* Listas */
+
+h4{
+    padding: 10px;
+}
+.listados{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 ul {
     list-style-type: none;
-    color: var(--color-text);
+    color: var(--color-text-amigo);
     font-family: "Inter", sans-serif;
-    font-size: 18px;
-    margin: 20px 0;
+    font-size: 24px;
+    margin: 30px 40px;
     text-align: center;
 }
 
 .result-list {
-    margin-top: 15px;
-    color: #05DF05;
-    font-size: 24px;
+    color: var(--color-primary);
     text-align: center;
+    font-weight: 600;
+
 }
 
 /* Botón de sortear título */
