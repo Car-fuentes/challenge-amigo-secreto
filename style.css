@@ -62,9 +62,8 @@ body {
 /* Títulos */
 .main-title {
     font-size: 50px;
-    font-family: "Inter", serif; /*"Merriweather", serif;*/
+    font-family: "Inter", serif; 
     font-weight: 900;
-    /*font-style: italic;*/
     color: var(--color-white);
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 }
@@ -96,6 +95,7 @@ body {
 }
 
 .button-container {
+    display: flex;
     width: 300px;
     justify-content: center;
 }
@@ -169,12 +169,28 @@ ul {
     color: var(--color-white);
     background-color: var(--color-button);
     font-size: 16px;
+    margin: 2px 20px;
+}
+
+.button-draw2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 40px;
+    color: black;
+    background-color: var(--color-button);
+    font-size: 16px;
+    margin: 2px 20px;
 }
 
 .button-draw img {
     margin-right: 40px;
 }
+.button-draw2 img {
+    margin-right: 32px;
+}
 
-.button-draw:hover {
+.button-draw:hover,.button-draw2:hover {
     background-color: var(--color-button-hover);
 }
+

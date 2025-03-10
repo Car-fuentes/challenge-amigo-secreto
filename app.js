@@ -98,3 +98,20 @@ function sortearAmigo(){
     };
 
 }
+
+function limpiarListaSorteados(){
+    listadoSorteo.innerHTML = " ";
+    return;
+}
+
+function condicionesIniciales() {
+    listaAmigos = [];
+    listaAmigosSorteados = [ ];
+    contadorIndiceSorteado = 0;
+}
+
+function reiniciarSorteo() {
+    limpiarLista();
+    limpiarListaSorteados()
+    condicionesIniciales();   
+}
