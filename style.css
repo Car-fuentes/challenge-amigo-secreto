@@ -47,6 +47,11 @@ body {
 
 }
 
+@media screen and (max-width: 767px){
+
+}
+
+
 /* Sección de entrada */
 .input-section {
     flex: 60%;
@@ -76,6 +81,7 @@ body {
     margin: 18px 0;
     text-align: center;
 }
+
 
 /* Contenedores de entrada y botón */
 .input-wrapper {
@@ -194,3 +200,22 @@ ul {
     background-color: var(--color-button-hover);
 }
 
+@media screen and (max-width: 767px){
+    .header-banner{
+        background-image: url("assets/fondocelu.jpg");
+        max-height: 250px;
+    }
+    .main-title{
+        font-size: 22px;
+    }
+    .section-title{
+        font-size: 18px;
+    }
+    
+    .button-container{
+        flex-direction: column;
+
+    }
+    ;
+
+}

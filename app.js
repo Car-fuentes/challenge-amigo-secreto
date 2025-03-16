@@ -87,9 +87,7 @@ function sortearAmigo(){
             } else{
             //agregar a la lista
             listaAmigosSorteados.push(amigoSorteado);
-            console.log(listaAmigosSorteados);
             contadorIndiceSorteado +=1;
-            console.log(contadorIndiceSorteado);
             };    
         if (listaAmigosSorteados.length === listaAmigos.length) {
                 mostrarListaSorteados();
