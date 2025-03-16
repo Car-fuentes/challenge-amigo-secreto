@@ -33,7 +33,7 @@ body {
 
 /* Banner */
 .header-banner {
-    flex: 90%;
+    flex: 80%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -214,8 +214,23 @@ ul {
     
     .button-container{
         flex-direction: column;
-
+        justify-content: center;
+        text-align: center;
     }
+
+    h4{
+        padding: 4px;
+        font-size: 16px;
+    }
+    ul {
+        font-size: 15px;
+        margin: 10px;
+    }
+
+    .button-draw, .button-draw2{
+        margin: 10px 5px;
+    }
+
     ;
 
 }
