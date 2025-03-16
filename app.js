@@ -54,7 +54,19 @@ function actualizarLista(){
 let listaAmigosSorteados = [ ];
 let contadorIndiceSorteado = 0;
 
+let listadoFlechas = document.getElementById('flechas');
 let listadoSorteo = document.getElementById('resultado');
+
+
+function agregarFlechas(){
+    let listaFlechas = "<h4 style='color:var(--color-secondary)'>|</h4>" ;
+
+    for (let amigoSorteado of listaAmigosSorteados){
+        listaFlechas += `<li><img class="flecha" src="assets/arrow.png" alt="flecha"></li>`;
+    }
+
+    listadoFlechas.innerHTML = listaFlechas;
+};
 
 function mostrarListaSorteados(){
         let listaResultados = "<h4>Tu amigo secreto es:</h4>";
@@ -90,6 +102,7 @@ function sortearAmigo(){
             contadorIndiceSorteado +=1;
             };    
         if (listaAmigosSorteados.length === listaAmigos.length) {
+                agregarFlechas();
                 mostrarListaSorteados();
             }
         };

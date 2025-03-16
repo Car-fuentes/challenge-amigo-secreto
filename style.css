@@ -159,6 +159,12 @@ ul {
     text-align: center;
 }
 
+.flecha{
+    width: 20px; 
+    vertical-align: baseline;
+}
+
+
 .result-list {
     color: var(--color-primary);
     text-align: center;
@@ -219,12 +225,18 @@ ul {
     }
 
     h4{
-        padding: 4px;
+        padding: 12px 2px 10px 2px;
         font-size: 16px;
     }
     ul {
         font-size: 15px;
-        margin: 10px;
+        margin: 2px;
+        padding-bottom: 8px;
+    }
+
+    .flecha{
+        width: 15px; 
+        vertical-align: baseline;
     }
 
     .button-draw, .button-draw2{
